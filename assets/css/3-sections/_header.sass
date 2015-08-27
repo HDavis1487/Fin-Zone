@@ -1,0 +1,75 @@
+header
+  background:
+    image: url('http://upload.wikimedia.org/wikipedia/commons/8/8b/NFL_Jets_at_Dolphins-Sun_Life_Stadium-2012-09-24.JPG')
+    size: cover
+    position: center
+  color: white
+  height: 650px
+
+
+.header-position
+  display: flex
+  // background: orange
+  align-items: center
+  position: relative
+
+  .site
+    position: absolute
+    top: 0
+    left: 0
+    bottom: 0
+    right: 0
+    nav
+      background: fade-out(black, 0.63)
+      // max-width: 65%
+      position: relative
+      padding: 12px
+      top: 25px
+      margin-bottom: 20px
+
+      li
+        display: inline-block
+        margin-right: 35px
+      a
+        color: $bg-color
+        font:
+          weight: 600
+          size: 18px
+        &:hover
+          color: $accent-color
+
+
+    &--info
+      align-self: center
+      text-align: center
+      position: relative
+      top: 68px
+      h2
+        color: white
+        font:
+          size: 60px
+      p
+        font:
+          size: 18px
+          weight: 600
+        text-transform: uppercase
+        text-align: center
+
+@media (max-width: 775px)
+  header
+    background:
+      size: cover
+      position: center
+
+  .site
+    position: relative
+    nav
+      position: absolute
+      top: 0
+      display: flex
+      justify-content: space-around
+      align-items: center
+
+@media (max-width: 600px)
+  .site--info h2
+      font-size: 48px

@@ -1,0 +1,18 @@
+mixin siteNav
+  ul
+    li: a(href="") Home
+    li: a(href="#league") Around the league
+    li: a(href="") Roster
+    li: a(href="") Schedule
+    li: a(href="") Contact
+    li: a(href="") Photos
+
+header
+  .header-position
+    .site
+      nav.site--nav
+        +siteNav
+      .site--hero
+      .site--info
+        h2 Welcome to the Fin Zone
+        p the unoffical offical fan site

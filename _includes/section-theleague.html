@@ -1,0 +1,28 @@
+
+<section id="league" class="league">
+  <div class="flex flex--space-around">
+    <div class="article-wrap">
+      <aside class="old-stories col-1">
+        <h3 class="area">League News</h3>
+        <ul>{% for post in site.categories.old %}
+          <li>
+            <h3><a href="{{ post.url }}">{{ post.title}}</a></h3>
+            <p>Posted: {{post.date | date: "%b %d, %Y"}}<br/> by <em>{{post.author}}</em></p>
+          </li>{% endfor %}
+        </ul>
+      </aside>
+      <article class="top-stories order-first flex--full">
+        <h3 class="area">Top Stories</h3>
+        <div class="top-article-wrap">
+          <ul>{% for post in site.categories.top %}
+            <li>
+              <h2>{{ post.title }}</h2>
+              <div style="background-image:url(/assets/img/post/thumbnails/{{post.thumbnail}})" class="thumbnail"></div>{{ post.excerpt }}
+              <p>Posted: {{post.date | date: "%b %d, %Y"}}<br/> by <em>{{post.author}}</em></p><a href="{{ post.url }}">Read More</a>
+            </li>{% endfor %}
+          </ul>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,51 @@
+#roster
+  margin-bottom: 40px
+table
+  margin-bottom: 60px
+.table-title
+  text-align: center
+  color: $accent-color
+.dolphins-players
+  max-width: 600px
+  margin-left: auto
+  margin-right: auto
+
+
+  a
+    display: inline-block
+    position: relative
+    &:hover .player-card
+      display: block
+
+    .player-card
+      display: block
+      position: absolute
+      top: -20px
+      left: 120px
+      background: white
+      padding: 10px
+      padding-bottom: -3px
+      box-shadow: 0px 0px 10px rgba(0,0,0,0.4)
+      z-index: 1
+      width: 400px
+      font-size: 14px
+      color: #666
+      display: none
+    img
+      width: 180px
+      height: auto
+      float: left
+      margin: 10px 20px 0 0
+      border: 1px solid #ccc
+    h4
+      text-align: left
+      margin-bottom: 10px
+    ul
+      list-style: none
+
+.player-position, .years-in
+  text-align: center
+
+
+strong
+  color: $accent-color
